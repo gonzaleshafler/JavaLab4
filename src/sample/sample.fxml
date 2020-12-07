@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -11,26 +12,29 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <GridPane prefHeight="405.0" prefWidth="600.0">
+      <GridPane prefHeight="400.0" prefWidth="542.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="277.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="323.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="269.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane pickOnBounds="false" prefHeight="400.0" prefWidth="500.0" scaleShape="false">
+            <AnchorPane pickOnBounds="false" prefHeight="400.0" prefWidth="500.0" scaleShape="false" styleClass="back-to-top">
                <children>
-                  <Label fx:id="countOfSteps" alignment="TOP_LEFT" layoutX="301.0" layoutY="43.0" prefHeight="215.0" prefWidth="230.0" />
-                  <TextField fx:id="aValue" layoutX="14.0" layoutY="22.0" promptText="Value of A" />
-                  <TextField fx:id="cValue" layoutX="14.0" layoutY="53.0" promptText="Value of C" />
-                  <TextField fx:id="bValue" layoutX="14.0" layoutY="80.0" promptText="Value of B" />
-                  <TextField fx:id="firstPointTextField" layoutX="14.0" layoutY="111.0" promptText="First point" />
-                  <TextField fx:id="lastPointTextField" layoutX="14.0" layoutY="137.0" promptText="Last point" />
-                  <TextField fx:id="deltaPointTextField" layoutX="14.0" layoutY="174.0" promptText="Delta" />
-                  <Button layoutX="14.0" layoutY="226.0" mnemonicParsing="false" onAction="#onClick" prefHeight="32.0" prefWidth="152.0" text="Calculate" />
+                  <TextField fx:id="aValue" layoutX="63.0" layoutY="14.0" promptText="Value of A" />
+                  <TextField fx:id="cValue" layoutX="63.0" layoutY="45.0" promptText="Value of C" />
+                  <TextField fx:id="bValue" layoutX="63.0" layoutY="72.0" promptText="Value of B" />
+                  <TextField fx:id="firstPointTextField" layoutX="63.0" layoutY="103.0" promptText="First point" />
+                  <TextField fx:id="lastPointTextField" layoutX="63.0" layoutY="135.0" promptText="Last point" />
+                  <TextField fx:id="deltaPointTextField" layoutX="63.0" layoutY="174.0" promptText="Delta" />
+                  <Button layoutX="65.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="32.0" prefWidth="152.0" text="Calculate" />
                </children>
             </AnchorPane>
+            <Label fx:id="countOfSteps" alignment="TOP_LEFT" prefHeight="215.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="textArea" prefHeight="154.0" prefWidth="413.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>
