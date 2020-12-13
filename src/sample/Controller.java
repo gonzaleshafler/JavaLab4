@@ -32,19 +32,29 @@ public void onClick(ActionEvent event)
     {
         CalculateY calculateY=new CalculateY();
 
+
+        Alert a=new Alert(Alert.AlertType.ERROR);
         try {
             calculateY.a= Double.parseDouble(aValue.getText());
             calculateY.b= Double.parseDouble(bValue.getText());
             calculateY.c= Double.parseDouble(cValue.getText());
 
+
             calculateY.x1=Double.parseDouble(firstPointTextField.getText());
             calculateY.x2=Double.parseDouble(lastPointTextField.getText());
+            if(calculateY.x1>calculateY.x2)
+            {
+                a.setContentText("Input Error\nValues entered incorrectly! First point cant be less than last point.");
+                a.show();
+                return;
+            }
+
             calculateY.dx=Double.parseDouble(deltaPointTextField.getText());
 
         }
         catch (NumberFormatException exception)
         {
-            Alert a=new Alert(Alert.AlertType.ERROR);
+
             a.setContentText("Input Error\nValues entered incorrectly! Try to enter only numbers.");
             a.show();
             return;
