@@ -9,23 +9,15 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class Controller {
-    @FXML
-    private TextField firstPointTextField;
-    @FXML
-    private TextField lastPointTextField;
-    @FXML
-    private TextField deltaPointTextField;
-    @FXML
-    private TextField aValue;
-    @FXML
-    private TextField bValue;
-    @FXML
-    private TextField cValue;
+    @FXML private TextField firstPointTextField;
+    @FXML private TextField lastPointTextField;
+    @FXML private TextField deltaPointTextField;
+    @FXML private TextField aValue;
+    @FXML private TextField bValue;
+    @FXML private TextField cValue;
 
-    @FXML
-    private Label countOfSteps;
-    @FXML
-    private TextArea textArea;
+    @FXML private Label countOfSteps;
+    @FXML private TextArea textArea;
 
 
 public void onClick(ActionEvent event)
@@ -44,7 +36,7 @@ public void onClick(ActionEvent event)
             calculateY.x2=Double.parseDouble(lastPointTextField.getText());
             if(calculateY.x1>calculateY.x2)
             {
-                a.setContentText("Input Error\nValues entered incorrectly! First point cant be less than last point.");
+                a.setContentText("Input Error\nValues entered incorrectly! First point cannot be greater than the last.");
                 a.show();
                 return;
             }
@@ -59,9 +51,6 @@ public void onClick(ActionEvent event)
             a.show();
             return;
         }
-
-
-
             calculateY.fillX(calculateY.x1, calculateY.x2,calculateY.dx);
             calculateY.fillY(calculateY.x);
             countOfSteps.setText("Count of steps = "+String.valueOf(calculateY.x.length)+

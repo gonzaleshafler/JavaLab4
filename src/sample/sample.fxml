@@ -34,7 +34,7 @@
                </children>
             </AnchorPane>
             <Label fx:id="countOfSteps" alignment="TOP_LEFT" prefHeight="215.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextArea fx:id="textArea" prefHeight="154.0" prefWidth="413.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="textArea" prefHeight="182.0" prefWidth="238.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>
