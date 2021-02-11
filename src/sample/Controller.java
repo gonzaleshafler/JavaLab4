@@ -66,8 +66,5 @@ public void onClick(ActionEvent event)
                 sb.append(s);
             }
             textArea.setText(sb.toString());
-
-
-
     }
 }
